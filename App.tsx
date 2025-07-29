@@ -1,13 +1,13 @@
 import { Switch, Route } from "wouter";
-import { queryClient } from "./lib/queryClient";
+import { queryClient } from "./queryClient.js";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { useAuth } from "@/hooks/useAuth";
-import ChatApp from "@/pages/chat-app";
-import Landing from "@/pages/landing";
-import NotFound from "@/pages/not-found";
-import AdminPage from "@/pages/admin";
+import { Toaster } from "./ui/toaster.js";
+import { TooltipProvider } from "./ui/tooltip.js";
+import { useAuth } from "./useAuth.js";
+import ChatApp from "./chat-app.js";
+import Landing from "./landing.js";
+import NotFound from "./not-found.js";
+import AdminPage from "./admin.js";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();

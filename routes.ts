@@ -1,8 +1,8 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import { storage } from "./storage";
-import { insertMessageSchema, insertChatSchema } from "@shared/schema";
-import { setupGoogleAuth, isAuthenticated, isAdmin } from "./googleAuth";
+import { storage } from "./storage.js";
+import { insertMessageSchema, insertChatSchema } from "./schema.js";
+import { setupGoogleAuth, isAuthenticated, isAdmin } from "./googleAuth.js";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
