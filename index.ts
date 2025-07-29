@@ -53,8 +53,9 @@ app.use((req, res, next) => {
     await setupVite(app, server);
   }
 
-  const PORT = 5000;
+  const PORT = process.env.PORT || 5000;
   server.listen(PORT, "0.0.0.0", () => {
     log(`Server running on port ${PORT} in ${process.env.NODE_ENV} mode`);
+    log(`Public access: http://0.0.0.0:${PORT}`);
   });
 })();
